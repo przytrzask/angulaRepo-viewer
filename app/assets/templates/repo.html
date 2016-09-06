@@ -1,0 +1,48 @@
+<!--<div layout="row" layout-align="center center">
+    <md-progress-circular md-mode='indeterminate' ng-show='isLoading'></md-progress-circular>
+</div>-->
+
+
+
+<md-list ng-controller='MainController' class="listdemoListControls">
+
+
+    <md-subheader>
+        Repositories List <input type="text" ng-model="search" class="form-control" placeholder="Search">
+        <md-input-container>
+            <label>Sort By</label>
+            <md-select name="sort" ng-model="sortBy" >
+          <md-option value="name" ng-click="sort('name')">name</md-option>
+          
+        </md-select>
+        </md-input-container>
+
+
+    </md-subheader>
+    <md-list-item ng-repeat="data in result |orderBy:sortKey:reverse|filter:search" ng-click="" class="noright">
+        <a href="{{data.html_url}}">
+            <img alt="githubIcon" ng-src="assets/img/Octocat.jpg" class="md-avatar">
+            <md-tooltip md-direction="top">See On Github</md-tooltip>
+        </a>
+        <p>{{ data.name }}</p>
+
+
+
+
+
+        <md-icon md-svg-src="assets/img/face.svg" href="#users" ng-click="setSelectedUrl(data.name)" class="md-secondary md-hue-2" aria-label="contributors">
+            <md-tooltip md-direction="top">View the Contributors</md-tooltip>
+        </md-icon>{{data.contributions}}
+
+        <md-divider></md-divider>
+    </md-list-item>
+    <md-divider></md-divider>
+    <div layout="row" layout-align="center center">
+        <md-button md-padding ng-click="previousPage()" class="md-fab md-second" aria-label="Use Android">
+            <md-icon md-svg-src="assets/img/icon-left.svg"></md-icon>
+        </md-button>Page {{main.page}}/6
+        <md-button md-padding ng-click="nextPage()" class="md-fab md-second" aria-label="Use Android">
+            <md-icon md-svg-src="assets/img/icon-right.svg"></md-icon>
+        </md-button>
+    </div>
+</md-list>

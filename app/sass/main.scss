@@ -1,0 +1,51 @@
+.md {
+
+
+&-card{
+    width:200px;
+    border-top: 5px solid #FF3C2F; 
+    }
+    &-headline {
+        font-size: 12px;
+        
+    }
+}
+
+.card-media {
+    
+    border-radius: 50px;
+    border: 2px solid #dbdbdb;
+    background-color:#dbdbdb;
+    background-size: cover;
+
+&::after {
+    content: "";
+    position: absolute;
+    background-color:#dbdbdb;
+    top:5px;
+    left: 5px;
+}
+}
+.justify {
+    
+    display: flex;
+     align-content: space-between;
+    justify-content: space-between;
+}
+
+.odd {
+    border-top: 4px solid #F45958;
+}
+
+.even{
+    border-top: 4px solid #00C5E9;
+
+}
+
+.opacity {
+    opacity: 0.4;
+}
+
+.dialogAvatar {
+    width: 100px;
+}

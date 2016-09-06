@@ -1,0 +1,43 @@
+<!--<div layout="row" layout-align="center center">
+    <md-progress-circular md-mode='indeterminate' ng-show='isLoading'></md-progress-circular>
+</div>-->
+<div class="controller" ng-controller="usersController">
+<md-subheader><span style="cursor:pointer;" ng-click="pathReload()"><md-tooltip md-direction="top">go back to main</md-tooltip>Users of Angular</span> --> {{path}}
+    <md-input-container>
+        <label>Sort By</label>
+        <md-select name="sort" ng-model="sortBy">
+            <md-option value="red" ng-click="sort('login')">name</md-option>
+            <md-option value="blue" ng-click="sort('contributions')">Contributions</md-option>
+            
+        </md-select>
+    </md-input-container>
+</md-subheader>
+<div class='md-padding' layout-wrap='' layout='row' layout-align="center center">
+    <md-card ng-repeat='data in mydata |orderBy:sortKey' ng-class="$even ? 'odd' : 'even'">
+        <md-card-title class="justify">
+            <md-card-title-media>
+                <div class="md-media-sm card-media" style="background-image: url('{{data.avatar_url}}')"></div>
+            </md-card-title-media>
+            <md-card-title-text>
+                <span class="md-headline"><md-icon class="opacity" md-svg-src="assets/img/profile_icon.svg"></md-icon> {{data.login}}</span>
+                <span class="md-headline"><md-icon class="opacity" md-svg-src="assets/img/contribution.svg"></md-icon>contributions {{data.contributions}}</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align=" center">
+            <md-button class="md-raised custom-btn" ng-click="showAdvanced($event); setUser(data.login)">
+                View Details
+            </md-button>
+        </md-card-actions>
+    </md-card>
+</div>
+
+
+    <div layout="row" layout-align="center center">
+        <md-button md-padding ng-click="previousPage()" class="md-fab" aria-label="Use Android">
+            <md-icon md-svg-src="assets/img/icon-left.svg"></md-icon>
+        </md-button>Page {{main.page}}/{{main.pages}}
+        <md-button md-padding ng-click="nextPage()" class="md-fab md-second" aria-label="Use Android">
+            <md-icon md-svg-src="assets/img/icon-right.svg"></md-icon>
+        </md-button>
+    </div>
+</div>

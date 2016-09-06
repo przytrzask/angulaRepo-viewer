@@ -1,0 +1,33 @@
+{
+  "name": "githubapi",
+  "version": "1.0.0",
+  "description": "potfolio page concept",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log('test');"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/przytrzask/portfel.git"
+  },
+  "author": "trzasQ",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/przytrzask/portfel/issues"
+  },
+  "homepage": "https://github.com/przytrzask/portfel#readme",
+  "devDependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-aria": "^1.5.8",
+    "angular-material": "^1.1.0",
+    "angular-route": "^1.5.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^2.3.2",
+    "material-design-icons": "^3.0.1"
+  },
+  "dependencies": {
+    "gulp-haml": "^0.1.6"
+  }
+}

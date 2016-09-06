@@ -1,0 +1,30 @@
+<md-dialog aria-label="user" ng-controller='userController' flex="20">
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>{{user}}</h2>
+        <span flex></span>
+        
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content" >
+          
+          <img ng-src="{{userInfo.avatar_url}}" class="dialogAvatar"  alt="avatar" />
+          <md-subheader class="md-no-sticky">{{user}} overview</md-subheader>
+<div class="md-list-item-text" layout="column">
+    
+
+         <md-list-item layout="column" layout-align="center"  ng-click="null" href="https://github.com/{{user}}/followers"><md-icon md-svg-src="./assets/img/followers.svg"></md-icon>followers: {{userInfo.followers}}</md-list-item>
+  <md-list-item ng-click="null" href="https://github.com/{{user}}/following"><md-icon md-svg-src="./assets/img/followers.svg"></md-icon>following: {{userInfo.following}}</md-list-item>
+  <md-list-item ng-click="null"  href="https://github.com/{{user}}?tab=repositories"><md-icon md-svg-src="./assets/img/book.svg"></md-icon>Public Repos: {{userInfo.public_repos}}</md-list-item>
+  
+  
+      
+  </div>
+    </md-dialog-content>
+
+    
+  </form>
+</md-dialog>
