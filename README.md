@@ -3,7 +3,8 @@
 - live demo http://przytrzask.usermd.net/githubapiforscalac/app/#/
 
 ### How to use
-There is instruction on 'about it' page :smile:
+First You need to generate own auth keys.
+There is an UI instruction on 'about it' page :smile:
 ### Thanks
 To Scalac for inviting me to do this task. It is always productive
 ### Chosen technologies
